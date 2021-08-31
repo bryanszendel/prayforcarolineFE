@@ -1,9 +1,7 @@
-import logo from "./logo.svg";
 import "./App.scss";
 import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import moment from "moment";
 
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
@@ -107,11 +105,32 @@ function App() {
     <div className="App">
       <div className="headerContainer">
         <h2 className="headerTitle">Pray for Dawn</h2>
-        <p className="headerContent">
-          Please select a 15 minute timeslot below. The prayer chain for Dawn
-          Whitehurst begins at Midnight on September 1. When you select a slot,
-          please input your name and Save so that Wade can be encouraged by
-          everyone praying for Dawn during these delicate 24 hours.
+        <p className="headerContent">Friends and Family.</p>
+
+        <p>
+          Thank you for finding your way to this page to come together and
+          boldly proclaim healing and full restoration for Dawn Whitehurst in
+          Jesus name! Please select a 15 minute prayer time slot below by
+          inputting your name, and at MIDNIGHT on September 1st, a 24 hour
+          period of prayer, fasting and lifting Dawn up to the Lord will begin.
+        </p>
+
+        <p className="verse">
+          “For the weapons of our warfare are not carnal <br />
+          but mighty in God for pulling down strongholds,”
+          <br />
+          <span class="reference">- 2 Corinthians 10:4 NKJV</span>
+        </p>
+
+        <p className="verse">
+          “O God, You are my God; <br />
+          Early will I seek You;
+          <br /> My soul thirsts for You;
+          <br /> My flesh longs for You
+          <br /> In a dry and thirsty land <br />
+          Where there is no water.”
+          <br />
+          <span class="reference">- Psalms 63:1 NKJV</span>
         </p>
         <p className="headerContent">
           (Please direct any technical issues to Bryan Szendel{" "}
