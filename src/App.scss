@@ -6,7 +6,10 @@
   flex-direction: column;
   max-width: 1000px;
 
-  .header {
+  .headerContainer {
+    margin: 30px;
+  }
+  .headerContent {
     margin: 30px;
   }
 }
