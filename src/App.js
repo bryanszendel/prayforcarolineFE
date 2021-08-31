@@ -24,7 +24,7 @@ function App() {
     paperBooked: {
       padding: 2,
       width: "80%",
-      height: "100%",
+      height: 70,
       textAlign: "center",
       color: "#2b2b2b",
       fontSize: 12,
@@ -33,6 +33,7 @@ function App() {
     paperAvailable: {
       padding: theme.spacing(2),
       width: "80%",
+      height: 70,
       textAlign: "center",
       color: "white",
       fontSize: 18,
@@ -141,7 +142,7 @@ function App() {
         <Grid container spacing={1}>
           {slots.map((slot, index) => {
             return slot.person_name === null ? (
-              <Grid item xs={3} spacing={1} key={slot.id}>
+              <Grid item xs={6} sm={3} key={slot.id}>
                 <Button
                   id={slot.id}
                   onClick={() => handleOpen(slot.id)}
@@ -152,15 +153,19 @@ function App() {
                 </Button>
               </Grid>
             ) : (
-              <Grid item xs={3} spacing={1} key={slot.id}>
+              <Grid item xs={6} sm={3} spacing={1} key={slot.id}>
                 <Button
                   id={slot.id}
-                  // onClick={() => handleOpen(slot.id)}
                   disabled
                   variant="contained"
                   className={classes.paperBooked}
                 >
-                  {slot.person_name}
+                  {slot.person_name +
+                    " (" +
+                    getHour(slot.hour) +
+                    ":" +
+                    getMinutes(slot.minutes) +
+                    ")"}
                 </Button>
               </Grid>
             );
