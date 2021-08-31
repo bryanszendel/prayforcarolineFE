@@ -23,7 +23,7 @@ function App() {
     },
     paperBooked: {
       padding: 2,
-      width: "80%",
+      width: "90%",
       height: 70,
       textAlign: "center",
       color: "#2b2b2b",
@@ -32,7 +32,7 @@ function App() {
     },
     paperAvailable: {
       padding: theme.spacing(2),
-      width: "80%",
+      width: "90%",
       height: 70,
       textAlign: "center",
       color: "white",
