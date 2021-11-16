@@ -53,20 +53,33 @@ function App() {
 
   const classes = useStyles();
 
-  const [slots, setSlots] = useState([]);
+  const [slots1, setSlots1] = useState([]);
+  const [slots2, setSlots2] = useState([]);
   const [open, setOpen] = useState(false);
   const [clickedId, setClickedId] = useState(null);
   const [personName, setPersonName] = useState("");
 
   useEffect(() => {
-    getSlots();
+    getSlots1();
+    getSlots2();
   }, []);
 
-  const getSlots = () => {
+  const getSlots1 = () => {
     axios
-      .get("https://prayforcaroline.herokuapp.com/api/slots/")
+      .get(`https://prayforcaroline.herokuapp.com/api/slots/day/1`)
       .then((res) => {
-        setSlots(res.data.sort((a, b) => a.id - b.id));
+        setSlots1(res.data.sort((a, b) => a.id - b.id));
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  };
+
+  const getSlots2 = () => {
+    axios
+      .get(`https://prayforcaroline.herokuapp.com/api/slots/day/2`)
+      .then((res) => {
+        setSlots2(res.data.sort((a, b) => a.id - b.id));
       })
       .catch((err) => {
         console.error(err);
@@ -97,7 +110,8 @@ function App() {
       .then((res) => {
         console.log(res.data);
         handleClose();
-        getSlots();
+        getSlots1();
+        getSlots2();
       })
       .catch((err) => console.error(err));
   };
@@ -112,7 +126,7 @@ function App() {
           Thank you for finding your way to this page to come together and
           boldly proclaim healing and full restoration for sweet Caroline in
           Jesus name! Please select a 15 minute prayer time slot below by
-          inputting your name, and at MIDNIGHT on November 16, a 24 hour period
+          inputting your name, and at MIDNIGHT on November 17, a 48 hour period
           of prayer, fasting and lifting sweet Caroline up to the Lord will
           begin.
         </p>
@@ -140,8 +154,44 @@ function App() {
         </p>
       </div>
       <div className="classes.root">
+        <div class="day-header">Beginning Midnight November 17</div>
         <Grid container spacing={1}>
-          {slots.map((slot, index) => {
+          {slots1.map((slot, index) => {
+            return slot.person_name === null ? (
+              <Grid item xs={6} sm={3} key={slot.id}>
+                <Button
+                  id={slot.id}
+                  onClick={() => handleOpen(slot.id)}
+                  variant="contained"
+                  className={classes.paperAvailable}
+                >
+                  {getHour(slot.hour) + ":" + getMinutes(slot.minutes)}
+                </Button>
+              </Grid>
+            ) : (
+              <Grid item xs={6} sm={3} spacing={1} key={slot.id}>
+                <Button
+                  id={slot.id}
+                  disabled
+                  variant="contained"
+                  className={classes.paperBooked}
+                >
+                  {slot.person_name +
+                    " (" +
+                    getHour(slot.hour) +
+                    ":" +
+                    getMinutes(slot.minutes) +
+                    ")"}
+                </Button>
+              </Grid>
+            );
+          })}
+        </Grid>
+      </div>
+      <div className="classes.root">
+        <div class="day-header">Beginning Midnight November 18</div>
+        <Grid container spacing={1}>
+          {slots2.map((slot, index) => {
             return slot.person_name === null ? (
               <Grid item xs={6} sm={3} key={slot.id}>
                 <Button
