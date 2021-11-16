@@ -64,7 +64,7 @@ function App() {
 
   const getSlots = () => {
     axios
-      .get("https://prayforcarloline.herokuapp.com/api/slots/")
+      .get("https://prayforcaroline.herokuapp.com/api/slots/")
       .then((res) => {
         setSlots(res.data.sort((a, b) => a.id - b.id));
       })
