@@ -64,7 +64,7 @@ function App() {
 
   const getSlots = () => {
     axios
-      .get("https://prayfordawn.herokuapp.com/api/slots/")
+      .get("https://prayforcarloline.herokuapp.com/api/slots/")
       .then((res) => {
         setSlots(res.data.sort((a, b) => a.id - b.id));
       })
@@ -91,7 +91,7 @@ function App() {
 
   const handleSubmit = async () => {
     axios
-      .put(`https://prayfordawn.herokuapp.com/api/slots/${clickedId}`, {
+      .put(`https://prayforcaroline.herokuapp.com/api/slots/${clickedId}`, {
         person_name: personName,
       })
       .then((res) => {
@@ -105,15 +105,16 @@ function App() {
   return (
     <div className="App">
       <div className="headerContainer">
-        <h2 className="headerTitle">Pray for Dawn</h2>
+        <h2 className="headerTitle">Pray for sweet Caroline</h2>
         <p className="headerContent">Friends and Family.</p>
 
         <p>
           Thank you for finding your way to this page to come together and
-          boldly proclaim healing and full restoration for Dawn Whitehurst in
+          boldly proclaim healing and full restoration for sweet Caroline in
           Jesus name! Please select a 15 minute prayer time slot below by
-          inputting your name, and at MIDNIGHT on September 1st, a 24 hour
-          period of prayer, fasting and lifting Dawn up to the Lord will begin.
+          inputting your name, and at MIDNIGHT on November 16, a 24 hour period
+          of prayer, fasting and lifting sweet Caroline up to the Lord will
+          begin.
         </p>
 
         <p className="verse">
@@ -135,7 +136,7 @@ function App() {
         </p>
         <p className="headerContent">
           (Please direct any technical issues to Bryan Szendel{" "}
-          <a href="sms:19048878616">(904) 887-8616</a> and not Wade)
+          <a href="sms:19048878616">(904) 887-8616</a> and not the Eckles)
         </p>
       </div>
       <div className="classes.root">
