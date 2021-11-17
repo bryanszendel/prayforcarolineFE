@@ -37,8 +37,8 @@ function App() {
       textAlign: "center",
       color: "white",
       fontSize: 18,
-      backgroundColor: "#AF7179",
-      "&:hover": { backgroundColor: "#9c575b" },
+      backgroundColor: "#b58db8",
+      "&:hover": { backgroundColor: "#CA9DCD" },
     },
     headerContent: {},
   }));
