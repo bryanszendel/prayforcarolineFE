@@ -126,9 +126,8 @@ function App() {
           Thank you for finding your way to this page to come together and
           boldly proclaim healing and full restoration for sweet Caroline in
           Jesus name! Please select a 15 minute prayer time slot below by
-          inputting your name, and at MIDNIGHT on November 17, a 48 hour period
-          of prayer, fasting and lifting sweet Caroline up to the Lord will
-          begin.
+          inputting your name, and at MIDNIGHT on March 7, a 48 hour period of
+          prayer, fasting and lifting sweet Caroline up to the Lord will begin.
         </p>
 
         <p className="verse">
@@ -148,13 +147,9 @@ function App() {
           <br />
           <span class="reference">- Psalms 63:1 NKJV</span>
         </p>
-        <p className="headerContent">
-          (Please direct any technical issues to Bryan Szendel{" "}
-          <a href="sms:19048878616">(904) 887-8616</a> and not the Eckles)
-        </p>
       </div>
       <div className="classes.root">
-        <div class="day-header">Beginning Midnight November 17</div>
+        <div class="day-header">Beginning Midnight March 8</div>
         <Grid container spacing={1}>
           {slots1.map((slot, index) => {
             return slot.person_name === null ? (
@@ -189,7 +184,7 @@ function App() {
         </Grid>
       </div>
       <div className="classes.root">
-        <div class="day-header">Beginning Midnight November 18</div>
+        <div class="day-header">Beginning Midnight March 9</div>
         <Grid container spacing={1}>
           {slots2.map((slot, index) => {
             return slot.person_name === null ? (
