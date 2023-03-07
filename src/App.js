@@ -126,7 +126,7 @@ function App() {
           Thank you for finding your way to this page to come together and
           boldly proclaim healing and full restoration for sweet Caroline in
           Jesus name! Please select a 15 minute prayer time slot below by
-          inputting your name, and at MIDNIGHT on March 7, a 48 hour period of
+          inputting your name, and at MIDNIGHT on March 8, a 48 hour period of
           prayer, fasting and lifting sweet Caroline up to the Lord will begin.
         </p>
 
